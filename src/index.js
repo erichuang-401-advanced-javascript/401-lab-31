@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import LoginContext from './components/auth/context.js';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import LoginContext from "./components/auth/context.js";
 
-import ToDo from './components/todo/todo.js';
-import Header from './components/header/header.js';
+import ToDo from "./components/todo/todoFxn.jsx";
+import Header from "./components/header/header.js";
 
-import './site.scss';
+import "./site.scss";
 
 function App() {
   return (
@@ -19,5 +19,5 @@ function App() {
   );
 }
 
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);

@@ -1,6 +1,6 @@
-import superagent from 'superagent';
-import React from 'react';
-import { LoginContext } from './context.js';
+import superagent from "superagent";
+import React from "react";
+import { LoginContext } from "./context.js";
 
 const API = process.env.REACT_APP_API;
 
@@ -16,13 +16,13 @@ class Login extends React.Component {
   handleSubmit = (e, loginMethodFromContext) => {
     e.preventDefault();
     superagent
-    .post(`${API}/signin`)
-    .auth(this.state.username, this.state.password)
-    .then(response => {
-      let token = response.text;
-      loginMethodFromContext(token);
-    })
-    .catch(console.error);
+      .post(`${API}/signin`)
+      .auth(this.state.username, this.state.password)
+      .then(response => {
+        let token = response.text;
+        loginMethodFromContext(token);
+      })
+      .catch(console.error);
   };
 
   render() {
@@ -32,9 +32,7 @@ class Login extends React.Component {
           return (
             <>
               <If condition={context.loggedIn}>
-                <button onClick={context.logout}>
-                  Log Out
-                </button>
+                <button onClick={context.logout}>Log Out</button>
               </If>
               <If condition={!context.loggedIn}>
                 <div>

@@ -5,6 +5,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "dotenv": "8.1.0",
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.9.1",
     "jest-mock": "24.0.0",
