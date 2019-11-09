@@ -2,7 +2,7 @@ import superagent from 'superagent';
 import React from 'react';
 import { LoginContext } from './context.js';
 
-const API = process.env.REACT_APP_API;
+const API = process.env.REACT_APP_API || 'https://api-js401.herokuapp.com';
 
 const If = props => {
   return !!props.condition ? props.children : null;
@@ -15,6 +15,7 @@ class Login extends React.Component {
 
   handleSubmit = (e, loginMethodFromContext) => {
     e.preventDefault();
+    console.log(API);
     superagent
     .post(`${API}/signin`)
     .auth(this.state.username, this.state.password)

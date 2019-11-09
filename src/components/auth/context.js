@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken';
 
 export const LoginContext = React.createContext();
 
-const SECRET = process.env.REACT_APP_SECRET || 'changeit';
+const SECRET = process.env.REACT_APP_SECRET || 'supersecret';
 
 const setLoginState = token => {
   let loggedIn = false;
