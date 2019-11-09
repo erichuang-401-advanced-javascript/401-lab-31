@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import Auth from '../auth/auth.js';
+import Auth from "../auth/authFxn.jsx";
 
-import styles from './todo.module.scss';
+import styles from "./todo.module.scss";
 
 const Todo = () => {
   const [ item, setItem ] = useState('');
